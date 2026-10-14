@@ -27,6 +27,12 @@ The project demonstrates practical data engineering concepts, including:
 - Data quality testing and validation
 - Fact modeling and One Big Table (OBT) design
 
+### Data Source and Ingestion
+
+The Airbnb source datasets are stored in an Amazon S3 bucket and loaded into Snowflake using the configured storage integration and external stage. The data is made available through Snowflake staging tables before dbt applies transformations across the Bronze, Silver, and Gold layers.
+
+**Note:** The S3 bucket, Snowflake configuration, and source data must be set up separately to reproduce the pipeline.
+
 ## Architecture
 
 The pipeline follows a layered ELT approach, with Snowflake serving as the data warehouse and dbt managing SQL transformations.
