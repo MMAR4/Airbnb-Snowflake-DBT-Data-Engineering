@@ -210,6 +210,12 @@ Airbnb-Snowflake-DBT-Data-Engineering/
 │   ├── dbt_project.yml
 │   └── .gitignore
 │
+├── sourceData/
+│   ├── README.md
+│   ├── bookings.csv
+│   ├── hosts.csv
+│   └── listings.csv
+│
 ├── docs/
 │   └── images/
 │       └── all_image.png
