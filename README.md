@@ -60,15 +60,47 @@ flowchart TD
 
 ## Project Screenshots
 
-The following composite screenshot showcases the Snowflake Gold-layer tables, Fact and OBT query results, dbt model lineage, and pipeline build output.
+The following screenshots demonstrate the pipeline's implemented data models, Snowflake query results, dbt transformation lineage, and execution output.
 
-![Snowflake Gold Layer Schema](docs/images/gold-schema.png))
-![ Fact Table — Analytical Data Model](docs/images/fact-table.png))
-![One Big Table (OBT) — Denormalized Analytics](docs/images/obt-results.png))
-![dbt Model Lineage — Transformation Dependencies](docs/images/obt-lineage.png))
-![dbt Build — Pipeline Execution](docs/images/dbt-build.png))
+### 1. Gold Layer — Data Model Overview
 
-*Evidence of the implemented data models, transformation dependencies, and pipeline execution.*
+Displays the tables available in the Snowflake Gold schema, including the Fact model, snapshot-based dimensions, and One Big Table (OBT). This provides an overview of the analytical data structures produced by the pipeline.
+
+![Snowflake Gold Layer Schema](docs/images/gold-schema.png)
+
+*The Gold layer organizes transformed data into analytical models for downstream querying and reporting.*
+
+### 2. Fact Table — Analytical Data Model
+
+Shows the Gold-layer Fact model, including booking identifiers, listing and host relationships, and numerical measures such as booking amounts, service fees, cleaning fees, and property attributes.
+
+![Fact Table — Analytical Data Model](docs/images/fact-table.png)
+
+*The Fact model provides a structured foundation for analyzing booking-related measures and associated entities.*
+
+### 3. One Big Table (OBT) — Denormalized Analytics
+
+Displays the OBT, which combines booking details with listing, property, location, and host attributes into a single denormalized dataset.
+
+![One Big Table (OBT) — Query Results](docs/images/obt-results.png)
+
+*The OBT simplifies analytical queries by bringing related information together in one table.*
+
+### 4. dbt Model Lineage — Transformation Dependencies
+
+Illustrates the dbt model lineage and dependencies, showing how upstream transformations connect to downstream analytical models.
+
+![dbt Model Lineage — Transformation Dependencies](docs/images/obt-lineage.png)
+
+*The lineage graph helps explain model relationships and trace how transformed data flows through the project.*
+
+### 5. dbt Build — Pipeline Execution
+
+Shows the dbt build output captured during pipeline execution, providing evidence of the models and configured validation steps processed by dbt.
+
+![dbt Build — Pipeline Execution](docs/images/dbt-build.png)
+
+*The execution output helps verify the pipeline run and review the status of the configured dbt resources.*
 
 ## Data Transformation Layers
 
