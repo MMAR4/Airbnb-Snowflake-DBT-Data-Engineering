@@ -62,7 +62,11 @@ flowchart TD
 
 The following composite screenshot showcases the Snowflake Gold-layer tables, Fact and OBT query results, dbt model lineage, and pipeline build output.
 
-![Airbnb data engineering pipeline — Snowflake Gold schema, Fact model, OBT results, dbt lineage, and dbt build execution](docs/images/all_image.png)
+![Snowflake Gold Layer Schema](docs/images/gold-schema.png))
+![ Fact Table — Analytical Data Model](docs/images/fact-table.png))
+![One Big Table (OBT) — Denormalized Analytics](docs/images/obt-results.png))
+![dbt Model Lineage — Transformation Dependencies](docs/images/obt-lineage.png))
+![dbt Build — Pipeline Execution](docs/images/dbt-build.png))
 
 *Evidence of the implemented data models, transformation dependencies, and pipeline execution.*
 
